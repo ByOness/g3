@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/content/detect.min.js"></script>
+    <!-- Facebook Pixel Code -->
+<script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+         fbq('init', '2248935322012693'); 
+        fbq('track', 'PageView');
+        </script>
+        <noscript>
+         <img height="1" width="1" 
+        src="https://www.facebook.com/tr?id=2248935322012693&ev=PageView
+        &noscript=1"/>
+        </noscript>
+        <!-- End Facebook Pixel Code -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Telegram</title>
+</head>
+<body>
+    <div class="header">
+        <img src="/content/logo.png" alt="">
+    </div>
+
+    <main class="main">
+        <section class="jumbotron text-center">
+            <div class="container">
+                <img src="/content/ava.jpg" alt="" class="ava">
+                <h1>Тут текст</h1>
+                <p>
+                    <a class="btn btn-primary b" href="tg://join?invite=AAAAAFBjFPR89LOAH54uVQ" role="button" onclick="fbq('track', 'Lead'); return true;">Открыть в Telegram</a>
+                    <a class="btn btn-secondary b" id="dlink" href="http://t.me/" role="button">У меня нет Telegram</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+<script type="text/javascript">
+  var user = detect.parse(navigator.userAgent);
+  dlink = "http://t.me/";
+  if (user.os.family == "iOS") {dlink = 'https://itunes.apple.com/ru/app/telegram-messenger/id686449807?mt=8'}             
+  if (user.os.family == "Android") {dlink = 'market://details?id=org.telegram.messenger'}
+  document.getElementById("dlink").setAttribute("href", dlink);
+</script>
+
+<style>
+    .jumbotron {
+        padding: 20px 10px 10px 10px;
+        border-radius: 0;
+    }
+    .main {
+        min-width: 250px;
+    }
+    .b{
+        margin-bottom: 10px;
+    }
+    h1{
+        font-weight: 900;
+        font-size: 30px;
+        margin: 15px 0;
+    }
+    .header{
+        padding: 10px;
+    }
+    .ava {
+        width:110px;
+        border-radius: 50%;
+    }
+</style>
+</html>
